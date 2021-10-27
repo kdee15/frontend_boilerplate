@@ -1,0 +1,192 @@
+// 0.2 INPUTS [ 2.2.1. SELECT LISTS ]  ################################################################################
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// A.1. RESULTS FILTERS WRAPPER ---------------------------
+
+.search-results-filters-wrapper { display: none; padding: 20px 0; background: $grey-f2; }
+
+.search-filters-content {
+  &:after { content: ' '; display: block; height: 0; clear: both; }
+}
+
+// A.1. END -----------------------------------------------
+
+// A.1.1. RESULTS FIELDS WRAPPER --------------------------
+ 
+.search-filters-fields { float: none;
+  &:after { content: ' '; display: block; height: 0; clear: both; }
+}
+
+// A.1.1. END ---------------------------------------------
+
+// A.2. RESULTS FILTER INPUTS -----------------------------
+
+.search-filters-input { float: left; margin: 0 0 10px 0; position: relative; }
+.search-filters-location,
+.form-item-search-location { width: 100%; display: inline-block; position: relative;
+  .autoAreaLookupList { max-width: 100%; }
+
+  &:after { 
+    content: " ";
+    background-image: url('../../assets/images/location_marker.svg');
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 11px;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 39px;
+    width: 32px;
+    border-left: 1px solid $inputBorderColor;
+  }
+}
+.search-filters-min-price,
+.form-item-min-price { width: 47%; margin: 0 2% 10px 0; display: inline-block; }
+.search-filters-max-price,
+.form-item-max-price { width: 47%; margin: 0 0 10px 2%; display: inline-block; }
+.search-filters-bedrooms,
+.form-item-num-of-bedrooms { width: 47%; margin: 0 2% 10px 0; display: inline-block; }
+.search-filters-property-type,
+.form-item-property-type-dropdown { width: 47%; margin: 0 0 10px 2%; display: inline-block; }
+.search-filters-property-filter,
+.form-item-property-filters-dropdown { width: 100%; margin: 0 0 10px 0; display: inline-block; }
+
+// A.2. END -----------------------------------------------
+
+// A.2.1. RESULTS FILTER - TEXT INPUT ---------------------
+ 
+.search-filters-input {
+  .form-control { padding: 10px 6px; }
+}
+
+// A.2.1. END ---------------------------------------------
+
+// A.2.2. RESULTS FILTER - DROPDOWN -----------------------
+
+.search-filters-input {
+  .bootstrap-select {
+    .dropdown-toggle { border-color: #ccc; border-radius: 4px; padding: 16px 28px 4px 6px; }
+  }
+}
+
+.block__search-items,
+.block__search-control { padding: 20px 15px;
+  .form-type-select {
+    .dropdown-toggle { border-color: #ccc; border-radius: 4px; padding: 16px 28px 4px 6px; }
+  }
+}
+
+// A.2.2. END ---------------------------------------------
+
+// A.2.3. RESULTS FILTER - DROPDOWN TAG -------------------
+
+.search-filters-input {
+  .search-filters-field-tag {
+    position: absolute; top: 6px; left: 7px; font-size: 10px; line-height: 12px; color: $btn-clr; z-index: 3;
+  }
+}
+
+
+  .form-type-select { position: relative;
+    &.form-item-filter-price {
+      .control-label { top: 23px; }
+    }
+    .control-label { 
+      position: absolute; top: 6px; left: 7px; font-size: 10px; line-height: 12px; color: $btn-clr; z-index: 3;
+    }
+  }
+  .btn { margin: 1% auto; display: block;
+    .icon { display: none; }
+  }
+
+
+// A.2.3. END ---------------------------------------------
+
+// A.3. RESULTS FILTER BUTTON -----------------------------
+
+.search-filters-button { padding-top: 20px; float: none; }
+
+// A.3. END -----------------------------------------------
+
+// A.4. RESULTS FILTER TOGGLE BUTTON ----------------------
+
+.search-results-filters-toggle { background: #fff; padding: 20px 0; margin: 0; text-align: center;
+  .btn-toggle-filters { margin-bottom: 0; }
+}
+
+// A.4. END -----------------------------------------------
+
+// A.5. END -----------------------------------------------
+
+  .search-controls {
+
+    .sort-div { font-size: 16px; line-height:24px; color: $grey-80; cursor: pointer; }
+    #search-filter-toggle { display: none;
+      &.on { display: block; width: 100%; background: white; z-index: 100;
+        .property-search-sort-form { margin: 20px; }
+      }
+    }
+  }
+
+
+// A.5. END -----------------------------------------------
+
+// A.6. LANDING PAGE SEARCH BLOCK -------------------------
+
+
+  .search-results-filters-toggle { display: none; }
+  .block__search-control { 
+    &.container { width: 100%; display: block; background-color: transparent;
+      .form-item { width: 100%; margin: 0 0 10px 0; vertical-align: bottom;
+        &.form-item-search-location { position: relative;
+          input { padding-right: 30px }
+          &:after { 
+            content: " ";
+            background-image: url('../../assets/images/location_marker.svg');
+            display: block;
+            background-repeat: no-repeat;
+            background-size: 11px;
+            background-position: center center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 39px;
+            width: 32px;
+            border-left: 1px solid $inputBorderColor;
+          }
+        }
+      }
+    }
+  }
+
+// A.6. END -----------------------------------------------
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. MAX-WIDTH: 767px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($sm-dn) {} 
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($sm-up) {} 
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {} 
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {} 
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

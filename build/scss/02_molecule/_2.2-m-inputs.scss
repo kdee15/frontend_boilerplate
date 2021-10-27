@@ -1,0 +1,258 @@
+// 0.2 MOLECULE [ 2.1. LISTS ]  #######################################################################################
+
+// A. +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+// 1. OBJECT [ 1.1. INPUTS ] ##########################################################################################
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// A.0. VARIABLES -----------------------------------------
+
+$inputFont:            $default;
+$inputFontWeight:      400;
+$inputFontColor:       black;
+$inputFontSize:        14px;
+$inputLineHeight:      20px;
+$inputBackgroundColor: #fff;
+$inputBorderColor:     #ccc;
+$inputBorderRadius:      0;
+$greyInputBackground:  #f2f2f2;
+$greyInputHighlight:   #fff;
+
+
+// A.0. END - VARIABLES -----------------------------------
+
+
+// A.1. STYLED DROPDOWN -----------------------------------
+
+.bootstrap-select.btn-group {
+  font-family: $inputFont;
+  font-weight: $inputFontWeight;
+  width: 100% !important;
+  outline: none;
+  
+  .dropdown-toggle {
+    font-family: $inputFont;
+    font-weight: $inputFontWeight;
+    height: 40px;
+    font-size: $inputFontSize;
+    line-height: $inputLineHeight;
+    padding: 9px 32px 9px 12px;
+    position: relative;
+    color: $inputFontColor !important;
+    border: 1px solid $inputBorderColor;
+    border-radius: $inputBorderRadius;
+    text-transform: none;
+    background: $inputBackgroundColor;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    min-width: 1px;
+    margin: 0;
+    
+    &:hover, &.active, &:focus, &.focus, &:active:focus, &:active.focus, &.active:focus, &.active.focus { 
+      outline: none !important; 
+      border-color: $inputBorderColor;
+      background: $inputBackgroundColor;
+    }
+    
+    // A.1.1. STYLED DROPDOWN CARET / ARROW ---------------
+    
+    .bs-caret {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 38px;
+      width: 32px;
+      border-left: 1px solid $inputBorderColor;
+      font-size: $inputFontSize;
+      line-height: $inputLineHeight;
+      padding: 7px 0px;
+      
+      .caret {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        font-family: 'Glyphicons Halflings';
+        font-style: normal;
+        font-weight: normal;
+        line-height: $inputLineHeight;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        right: auto;
+        margin: auto;
+        border: none;
+        width: auto;
+        height: auto;
+        // left: 0;
+        transition: all 0.3s ease;
+
+        &:before {
+          // content: "\e114";
+          content: "\e259";
+          color: $inputFontColor;
+        }
+      }
+    }
+    
+    // A.1.1. END - STYLED DROPDOWN CARET / ARROW ---------
+  }
+  
+  // A.1.2. STYLED DROPDOWN MENU --------------------------
+  
+  .dropdown-menu {
+    li {
+      a { outline: none; padding-left: 12px; padding-right: 12px;
+        &:hover, &.active, &:focus, &.focus, &:active:focus, &:active.focus, &.active:focus, &.active.focus { outline: none !important; }
+      }
+    }
+  }
+
+  // A.1.2. END - STYLED DROPDOWN MENU --------------------
+  
+  // A.1.3. OPEN STYLED DROPDOWN --------------------------
+  
+  &.open {
+    .caret {
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+      // left: -1px !important;
+    }
+  }
+  
+  // A.1.3. END - OPEN STYLED DROPDOWN --------------------
+}
+
+// A.1. END - STYLED DROPDOWN -----------------------------
+
+
+// A.2. INPUT FIELD ---------------------------------------
+
+.form-control {
+  display: block;
+  width: 100%;
+  font-family: $inputFont;
+  font-weight: $inputFontWeight;
+  height: 40px;
+  font-size: $inputFontSize;
+  line-height: $inputLineHeight;
+  padding: 9px 12px;
+  color: black;
+  background-color: $inputBackgroundColor;
+  background-image: none;
+  border: 1px solid $inputBorderColor;
+  border-radius: $inputBorderRadius;
+  box-shadow: none;
+  
+  &::-webkit-input-placeholder { color: black; }
+  &::-moz-placeholder { color: black; }
+  
+  &:hover, &.active, &:focus, &.focus, 
+  &:active:focus, &:active.focus, 
+  &.active:focus, &.active.focus { border-color: $inputBorderColor; outline: none !important; box-shadow: none; }
+}
+
+// A.2. END - INPUT FIELD ---------------------------------
+
+
+// A.3. INPUT FIELD ADDON / MAP PIN -----------------------
+
+.input-group-addon { 
+  padding: 0px 6px 0px 5px;
+  font-size: $inputFontSize;
+  line-height: $inputLineHeight;
+  color: $btn-clr;
+  background-color: $inputBackgroundColor;
+  border: 1px solid $inputBorderColor;
+  border-radius: $inputBorderRadius;
+  
+  .glyphicon {
+    top: 3px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+// A.3. END - INPUT FIELD ADDON / MAP PIN -----------------
+
+
+// A.4. GREY INPUT FIELD MODIFIERS ------------------------
+
+.greyinput, .greyInputFields {
+  
+  // A.4.1. GREY STYLED DROPDOWN --------------------------
+  
+  .bootstrap-select.btn-group {
+    .dropdown-toggle {
+      background: $greyInputBackground;
+      
+      &:hover, &.active, &:focus, &.focus, &:active:focus, &:active.focus, &.active:focus, &.active.focus { background: $greyInputBackground; }
+    }
+    
+    // A.4.1.2. GREY STYLED DROPDOWN MENU -----------------
+    
+    .dropdown-menu { background: $greyInputBackground;
+      li {
+        a {
+          &:hover, &.active, &:focus, &.focus, &:active:focus, &:active.focus, &.active:focus, &.active.focus { background: $greyInputHighlight; }
+        }
+      }
+    }
+  
+    // A.4.1.2. END - GREY STYLED DROPDOWN MENU -----------
+    
+  }
+  
+  // A.4.1. END - GREY STYLED DROPDOWN --------------------
+  
+  // A.4.2. GREY INPUT FIELD ------------------------------
+  
+  .form-control {
+    background-color: $greyInputBackground;
+  }
+  
+  // A.4.2. END - GREY INPUT FIELD ------------------------
+  
+  // A.4.3. GREY INPUT FIELD ADDON / MAP PIN --------------
+  
+  .input-group-addon { 
+    background-color: $greyInputBackground;
+  }
+  
+  // A.4.3. END - GREY INPUT FIELD ADDON / MAP PIN --------
+  
+}
+
+// A.4. END - GREY INPUT FIELD MODIFIERS ------------------
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. MAX-WIDTH: 767px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($sm-dn) {} 
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($sm-up) {} 
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {} 
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {} 
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

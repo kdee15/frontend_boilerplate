@@ -1,0 +1,222 @@
+// 1. OBJECT [ 1.2. BUTTONS ] #########################################################################################
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// A.0. VARIABLES -----------------------------------------
+
+$btn-clr:                 #FFF;
+$btn-clr-2:               #CCC;
+$buttonFont:              'arial';
+$buttonFontWeight:        700;
+$buttonFontSize:          14px;
+$buttonLineHeight:        20px;
+$buttonMinWidth:          200px;
+
+$lightButtonFontWeight:   400;
+$mediumButtonFontWeight:  600;
+$heavyButtonFontWeight:   900;
+
+$radius-sml:              0;
+$radius-med:              0;
+$radius-lrg:              0;
+
+// A.0. END - VARIABLES -----------------------------------
+
+// A.1. DEFAULT BUTTON ------------------------------------
+
+.a-btn {
+  display: inline-block; 
+  padding: 9px 20px; 
+  margin: 0 12px; 
+  font-family: $buttonFont; 
+  font-weight: $buttonFontWeight; 
+  font-size: $buttonFontSize; 
+  line-height: $buttonLineHeight; 
+  text-align: center; 
+  text-transform: uppercase;
+  white-space: nowrap; 
+  vertical-align: middle; 
+  -ms-touch-action: manipulation; 
+  touch-action: manipulation; 
+  cursor: pointer; 
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+  background-image: none; 
+  border: 1px solid transparent; 
+  border-radius: $radius-med;
+  color: $btn-clr;
+  background-color: transparent;
+  border-color: $btn-clr;
+  text-rendering: optimizeLegibility;
+  outline: none;
+  min-width: $buttonMinWidth;
+  
+  // button spacing
+  &:first-child { margin-left: 0; }
+  &:last-child { margin-right: 0; }
+  
+  // default hover/active classes
+  &.focus, &:focus, &:hover, &.active { 
+    color: #fff; background-color: $btn-clr; border-color: $btn-clr; outline: none;
+  }
+  &:focus, &.focus, &:active:focus, &:active.focus, &.active:focus, &.active.focus { outline: none; }
+
+  // A.1.0. DEFAULT BUTTON MODIFIERS ----------------------
+  
+  &.light-text { font-weight: $lightButtonFontWeight; }
+  &.medium-text { font-weight: $mediumButtonFontWeight; }
+  &.heavy-text { font-weight: $heavyButtonFontWeight; }
+  &.normal-text { text-transform: none; }
+  &.thick-border { border-width: 2px; padding: 8px 20px; }
+  &.block { display: block; width: 100%; }
+  
+  // A.1.0. END : DEFAULT BUTTON MODIFIERS ----------------
+
+  // A.1.1. BLUE BUTTON -----------------------------------
+  
+  &.btn-solid { color: $btn-clr; background-color: $btn-clr-2; border-color: $btn-clr-2;
+    // Active styles
+    &.focus, &:focus, &:hover, &.active { color: $btn-clr-2; background-color: $btn-clr; border-color: $btn-clr; }
+    // Modifiers
+    & {}
+  }
+  
+  // A.1.1. END : BLUE BUTTON -----------------------------
+
+  // A.1.2. HOLLOW BLUE BUTTON ----------------------------
+  
+  &.btn-hollow { color: $btn-clr; background-color: transparent; border-color: $btn-clr;
+    // Active styles
+    &.focus, &:focus, &:hover, &.active { color: $btn-clr; background-color: $btn-clr-2; border-color: $btn-clr-2; }
+    // Modifiers
+    & {}
+  }
+  
+  // A.1.2. END : HOLLOW BLUE BUTTON ----------------------
+
+  
+  // A.1.6.1. BUTTON MAX WIDTH ----------------------------
+  
+  &.max-width-200 { max-width: 220px; display: block; margin: 0 auto; }
+  
+  // A.1.6.1. END -----------------------------------------
+
+  // A.1.7. ARROW AFTER BUTTON ----------------------------
+  
+  &.on { position: relative;
+    &:after { 
+      content: '';
+      outline: 0;
+      width: 0; 
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 30px solid $grey-f2;
+      position: absolute; 
+      bottom: -52px; 
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
+  // A.1.7. END : ARROW AFTER BUTTON ----------------------
+
+}
+
+// A.1. END : DEFAULT BUTTON ------------------------------
+
+// A.2. TEXT LINK -----------------------------------------
+
+.text-link { color: $btn-clr-2;
+  &:hover { color: $btn-clr-2; }
+}
+
+// A.2. END - TEXT LINK -----------------------------------
+
+// A.5. PROPERTY DETAILS BACK/PREV/NEXT BUTTONS -----------
+
+.btn-back { display: block; position: relative; font-size: 14px; line-height: 24px; color: $btn-clr;
+
+  /* button with arrow to the left */
+  &.btn-left { padding-left: 34px; float: left;
+    /* position the glyphicon */
+    .btn-glyph-wrap { left: 0; }
+  }
+
+  .btn-glyph-wrap {
+    display: block;
+    position: absolute;
+    top: -2px;
+    border: 1px solid $btn-clr;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    border-radius: $radius-sml;
+    .glyphicon-menu-left { top: 3px; }
+  }
+}
+
+.btn-fwd { display: block; position: relative; font-size: 14px; line-height: 24px; color: $btn-clr;
+
+  /* button with arrow to the right */
+  &.btn-right { padding-right: 34px; float: right;
+    /* position the glyphicon */
+    .btn-glyph-wrap { right: 0; }
+  }
+
+  .btn-glyph-wrap {
+    display: block;
+    position: absolute;
+    top: -2px;
+    border: 1px solid $btn-clr;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    border-radius: $radius-sml;
+    .glyphicon-menu-right { top: 3px; }
+  }
+}
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. MAX-WIDTH: 767px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($sm-dn) {
+
+  // A.1. DEFAULT BUTTON ----------------------------------
+  
+  .btn {
+    display: block;
+    white-space: normal;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 24px;
+    border-radius: $radius-lrg;
+  }
+  
+  // A.1. END - DEFAULT BUTTON ----------------------------
+
+} 
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($sm-up) {} 
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {} 
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {} 
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

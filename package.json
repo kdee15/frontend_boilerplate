@@ -1,39 +1,62 @@
 {
-  "name": "riverr_frontend_boilerplate",
+  "name": "lab_frontend",
   "version": "1.0.0",
-  "description": "gulp script used for SCSS and JS",
+  "description": "LAB Digital frontend project template",
   "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LabDigital/frontend-boilerplate.git"
-  },
-  "author": "lab_dev",
+  "author": "Lab Digital",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LabDigital/frontend-boilerplate/issues"
-  },
-  "homepage": "https://github.com/LabDigital/frontend-boilerplate#readme",
-  "dependencies": {
-    "gulp-uglify": "^3.0.2"
-  },
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
-    "cssnano": "^4.1.10",
-    "gulp": "^4.0.2",
+    "@babel/core": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1",
+    "angularjs-slider": "^7.0.0",
+    "autoprefixer": "^6.7.7",
+    "bootstrap": "^4.0.0",
+    "connect-livereload": "^0.6.0",
+    "express": "^4.15.2",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^2.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-html-partial": "^1.0.1",
-    "gulp-order": "^1.2.0",
-    "gulp-postcss": "^9.0.0",
-    "gulp-purgecss": "^3.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-terser": "^1.4.1"
+    "gulp-jshint": "^2.0.4",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "gutil": "^1.6.4",
+    "jshint": "^2.9.6",
+    "jshint-stylish": "^2.2.1",
+    "merge-stream": "^1.0.1",
+    "ng-animate": "^0.3.1",
+    "postcss": "^5.2.17",
+    "postcss-scss": "^0.4.1",
+    "pump": "^1.0.2",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.2.2",
+    "tiny-lr": "^1.0.4"
+  },
+  "dependencies": {
+    "@angular/animations": "^4.2.0",
+    "@angular/core": "^4.2.0",
+    "gulp-cli": "^2.0.1",
+    "jquery": "^1.9.1",
+    "natives": "^1.1.6",
+    "node-sass": "^4.11.0",
+    "popper.js": "^1.12.9",
+    "undertaker": "^1.2.0"
   }
 }

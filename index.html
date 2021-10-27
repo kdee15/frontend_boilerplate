@@ -1,45 +1,283 @@
 <!doctype html>
-<html lang="en">
 
-<head>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 3.0</title>
-    <meta name="description" content="LAB Components">
-  <link rel="icon" type="image/ico" href="dist/images/favicon.ico">
+    <title>LAB Style Guide</title>
+    <meta name="description" content="LAB Style Guide">
     <meta name="author" content="HTML">
-    <!-- A. CSS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    -->
-    <!-- A.1. CDN ------------------------------------- -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
-    <!-- A.2. LOCAL ----------------------------------- -->
-<!--    <link rel="stylesheet" href="dist/css/libraries.css">-->
-    <!-- A.3. CUSTOM CSS ------------------------------ -->
+
+    <!-- A. CSS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- BOOTSTRAP 3 -->
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+
+    <!-- BOOTSTRAP 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="dist/css/style.css">
-    <!--[if IE]>
-    <link rel="stylesheet" type="text/css" href="all-ie-only.css">
+
+    <!-- A. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- B. HEAD JS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ --> 
+
+    <!-- BOOTSTRAP 3 -->
+    <!--<script src="dist/js/components/jquery.min.js"></script>-->
+    <!--<script src="dist/js/components/bootstrap.min.js"></script>-->
+
+    <!-- BOOTSTRAP 4 -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
-    <!-- A. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    -->
-    <!-- B. HEAD JS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    -->
-    <!-- B.1. CDN ------------------------------------- -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
-    <!-- B.2. LOCAL ----------------------------------- -->
-<!--    <script src="dist/js/components.js"></script>-->
-    <!-- B. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    -->
-</head>
+    
+    <!-- B. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
-<body>
-  <div class="container">
-      <h1>Hello World ...</h1>
-  </div>
-</body>
-<script src="dist/js/app.js"></script>
+  </head>
 
+  <body>
+
+    <!-- C. CONTENT +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- C.1. PAGE HEADER ----------------------------- -->
+    
+    <header class="o-header">
+      <div class="container">
+        <h1>LAB Frontend Styleguide</h1>
+      </div>
+    </header>
+    
+    <!-- C.1. END ------------------------------------- -->
+    
+    <!-- C.2. SECTIONS -------------------------------- -->
+    
+    <!-- C.2.1. BUTTONS ------------------------------- -->
+    
+    <div class="container">
+      <h2>BUTTONS</h2>
+    </div>
+    
+    <section class="o-section o-buttons">
+      <div class="container">
+
+        <p>Regular Button - .a-btn</p>
+        <p><a class="a-btn" href="">button</a></p>
+        <p>Blue Button - .a-btn.btn-blue</p>
+        <p><a class="a-btn btn-blue" href="">button</a></p>
+        <p>Hollow Blue Button - .a-btn.btn-blue-hollow</p>
+        <p><a class="a-btn btn-blue-hollow" href="">button</a></p>
+        <p>Orange Button - .a-btn.btn-orange</p>
+        <p><a class="a-btn btn-orange" href="">button</a></p>
+        <p>Hollow Orange Button - .a-btn.btn-orange-hollow</p>
+        <p><a class="a-btn btn-orange-hollow" href="">button</a></p>
+        <p>White Button - .a-btn.btn-white</p>
+        <p><a class="a-btn btn-white" href="">button</a></p>
+        <p>Hollow White Button - .a-btn.btn-white-hollow</p>
+        <p><a class="a-btn btn-white-hollow" href="">button</a></p>
+        <p>Button with long text - .a-btn</p>
+        <p><a class="a-btn" href="">wide button with lots of text</a></p>
+        <p>Two buttons</p>
+        <p><a class="a-btn btn-blue" href="">button</a><a class="a-btn" href="">button</a></p>
+        <p>Three buttons</p>
+        <p>
+          <a class="a-btn " href="">button</a>
+          <a class="a-btn btn-blue" href="">button</a>
+          <a class="a-btn btn-orange" href="">button</a>
+        </p>
+        
+      </div>
+    </section>
+    
+    <!-- C.2.1. END ----------------------------------- -->
+    
+    <!-- C.2.2. CARDS --------------------------------- -->
+    
+    <div class="container">
+      <h2>CARDS</h2>
+    </div>
+    
+    <section class="o-section o-cards">
+      <div class="container">
+
+        <div class="row">
+          
+          <!-- C.2.2.1. ARTICLE CARD ------------------ -->
+
+          <article class="col-xs-4">
+            <div class="stacked o-card">
+              <figure class="o-card-image">
+                <img src="http://placehold.it/320x240" />
+              </figure>
+              <div class="o-card-body">
+                <h4 class="a-card-header">TITLE</h4>
+                <p class="a-card-text">lorem ipsum</p>
+              </div>
+              <div class="o-card-footer">
+                <a class="a-btn btn-blue" href="">button</a><a class="a-btn" href="">button</a>
+              </div>
+            </div>
+          </article>
+          
+          <!-- C.2.2.1. END --------------------------- -->
+        
+        </div>
+      
+      </div>
+    
+    </section>
+    
+    <!-- C.2.2. END ----------------------------------- -->
+    
+    <!-- C.2.3. FORMS --------------------------------- -->
+    
+    <div class="container">
+      <h2>FORMS</h2>
+    </div>
+    
+    <section class="o-section o-cards">
+      <div class="container">
+        <div class="row">
+          
+          <form>
+            
+            <!-- C.2.2.1. FORM COLUMN ----------------- -->
+            <div class="col-xs-12 col-sm-6">
+
+              <!-- FORM ELEMENT ----------------------- -->
+              <div class="form-group search-filters-input search-filters-location">
+                <label class="sr-only" for="search-filters-location">Location</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="search-filters-location" placeholder="Location" aria-describedby="location-addon">
+                  <span class="input-group-addon" id="location-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
+                </div>
+              </div>
+              <!-- END: FORM ELEMENT ------------------ -->
+              
+              <!-- FORM ELEMENT ----------------------- -->
+              <div class="m-form-item">
+                <label class="control-label" for="m-form-item">Title</label>
+                <select class="selectpicker form-control" title="Title">
+                  <option>option</option>
+                  <option>option</option>
+                  <option>option</option>
+                  <option>option</option>
+                  <option>option</option>
+                  <option>option</option>
+                </select>
+                <span class="search-filters-field-tag">Title-alt</span>
+              </div>
+              <!-- END: FORM ELEMENT ------------------ -->
+              
+              
+              
+              
+              
+              <div class="whitebg greyinput">
+                <div class="form-group">
+                  <label class="control-label" for="search-block-buy-location">Max. Price</label> 
+                  <select class="selectpicker form-control" id="search-block-buy-maxprice" title="Max. Price">
+                    <option>£100,000</option>
+                    <option>£125,000</option>
+                    <option>£150,000</option>
+                    <option>£175,000</option>
+                    <option>£200,000</option> 
+                  </select>
+                </div>
+              </div>
+              
+              
+              
+              
+              
+              
+
+            </div>
+            <!-- C.2.2.1. END ------------------------- -->
+                      
+            <!-- C.2.2.1. FORM COLUMN ----------------- -->
+            <div class="col-xs-12 col-sm-6">
+              
+              <!-- FORM ELEMENT ----------------------- -->
+              <div class="form-group m-form-item">
+                <label class="sr-only" for="m-form-item">Title</label>
+                <select class="selectpicker" title="Title">
+                  <option>option</option>
+                  <option>option</option>
+                  <option>option</option>
+                  <option>option</option>
+                  <option>option</option>
+                  <option>option</option>
+                </select>
+                <span class="search-filters-field-tag">Min. Price</span>
+              </div>
+              <!-- END: FORM ELEMENT ------------------ -->
+
+            </div>
+            <!-- C.2.2.1. END ------------------------- -->
+          
+          </form>
+
+          <!-- C.2.2.1. END --------------------------- -->
+        
+        </div>
+      </div>
+    </section>
+    
+    <!-- C.2.2. END ----------------------------------- -->
+  
+    <!-- C.2.3. TABLES -------------------------------- -->
+  
+    <div class="container">
+      <h2>TABLES</h2>
+    </div>
+  
+    <section class="o-section o-tables">
+      <div class="container">
+      
+        <div class="o-table-layout full-width">
+          <div class="a-table-row a-table-header hidden-xs">
+            <span class="a-table-cell">Column</span>
+            <span class="a-table-cell member-name">Column</span>
+            <span class="a-table-cell">Column</span>
+            <span class="a-table-cell">Column</span>
+          </div>
+          <div class="a-table-row">
+            <span class="a-table-cell">Cell</span>
+            <span class="a-table-cell">Cell</span>
+            <span class="a-table-cell">Cell</span>
+            <span class="a-table-cell">Cell</span>
+          </div>
+          <div class="a-table-row">
+            <span class="a-table-cell">Cell</span>
+            <span class="a-table-cell">Cell</span>
+            <span class="a-table-cell">Cell</span>
+            <span class="a-table-cell">Cell</span>
+          </div>
+          <div class="a-table-row">
+            <span class="a-table-cell">Cell</span>
+            <span class="a-table-cell">Cell</span>
+            <span class="a-table-cell">Cell</span>
+            <span class="a-table-cell">Cell</span>
+          </div>
+        </div>
+      
+      </div>
+    </section>
+  
+    <!-- C.2.3. END ----------------------------------- -->
+    
+    <!-- C.2. END ------------------------------------- -->
+    
+    <!-- C. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    
+    <!-- D. FOOTER SCRIPTS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    
+    <script src="dist/js/app.js"></script>
+    
+    <!-- D. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+  </body>
 </html>
