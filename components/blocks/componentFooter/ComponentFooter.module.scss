@@ -4,66 +4,12 @@
 .oFooter {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
-  background-color: $grey-02;
-  margin-top: 80px;
-  .aFooterLogo {
-    max-width: 300px;
-    margin: 0 auto;
-    .aImage {
-      width: 100% !important;
-      height: 100% !important;
-    }
-  }
-  .oIconList {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    justify-content: space-around;
-
-    .mLink {
-      display: block;
-      text-decoration: none;
-      color: white;
-      padding: 0;
-      margin: 0;
-      .mIcon {
-        display: inline-block;
-        vertical-align: middle;
-      }
-    }
-  }
-  .oFooterList {
-    display: block;
-    .aListItem {
-      display: block;
-      width: 100%;
-    }
-    .aFooterLink {
-      color: white;
-      &:hover {
-        color: #e2e2e2;
-      }
-    }
-  }
-
-  .mQRCode {
-    max-width: 150px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .aFooterText {
-    text-align: center;
-  }
-  .oFooterList {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  // A. END +++++++++++++++++++++++++++++++++++++++++++++++
+  background-color: #f2f2f2;
+  flex: 1 1 20%;
+  max-height: 100px;
+  padding: 40px;
 
   // B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
-
   @media ($md-dn) {
   }
 

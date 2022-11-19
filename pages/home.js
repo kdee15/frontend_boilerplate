@@ -1,7 +1,13 @@
+import Footer from "../components/blocks/componentFooter/ComponentFooter";
+import classes from "../styles/Global.module.scss";
+
 export default function Home() {
   return (
-    <div className="anchor" id="top">
-      <h1>HELLO</h1>
-    </div>
+    <>
+      <div className={`${classes.oPage} oPage`}>
+        <h1>NextJS FE Boilerplate</h1>
+      </div>
+      <Footer />
+    </>
   );
 }
